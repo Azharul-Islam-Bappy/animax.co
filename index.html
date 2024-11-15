@@ -3,11 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="#">
-  <title>Document</title>
+  <link rel="stylesheet" href="./dist/nav.css">
+  <title>this Day></title>
+  <script src="https://kit.fontawesome.com/bc5071f62b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- <header class="p-[1rem]">
+    <h1 class="flex flex-col justify-start gap-0 font-semibold text-3xl">
+      <span class="text-[#D1C4E9]">this<br><span class="text-[#000] relative top-[-10px]">Day></span></span>
+    </h1>
+    
+    
+    <nav class="p-[1rem] flex flex-col justify-around place-items-start lg:flex-row lg:justify-between lg:items-center text-2xl">
+      <a href="index.html">Daily quote</a>
+      <a href="#">Favorites</a>
+      <a href="#">Generate quote</a>
+      <a href="#">About</a>
+    </nav>
+  </header> -->
+  
+  <header class="py-[1rem] px-[0.8rem] flex justify-between items-center sticky top-0 z-10">
+    <h1 id="logo" class="flex flex-col justify-start gap-0 font-semibold text-3xl">
+      <span class="text-[#D1C4E9]">this<br><span class="text-[#000] relative top-[-10px]">Day></span></span>
+    </h1>
+    <button id="menu-toggle" class="border-0 outline-0 lg:hidden"><i class="fa-solid fa-bars text-2xl"></i></button>
+    <nav id="nav-menu" class="hidden fixed top-0 left-0 z-50 lg:relative lg:flex lg:w-auto lg:h-auto lg:p-[1rem] shadow shadow-2xl shadow-[hsl(223, 47%, 23%)] w-[96%] h-screen pt-[1rem] mt-1.5 transition-all">
+      <ul class="flex flex-col lg:flex-row lg:gap-[6] justify-between gap-[0.8rem] text-2xl font-bold">
+        <div class="px-[1rem] flex justify-between items-center gap-1.5 mb-[1.2rem] lg:hidden">
+          <h1  class="flex flex-col justify-start gap-0 font-semibold text-3xl">
+            <span class="text-[#D1C4E9]">this<br><span class="text-[#000] relative top-[-10px]">Day></span></span>
+          </h1>
+          <i id="close-menu" class="fa-solid fa-xmark text-3xl"></i>
+        </div>
+        <li style="color: #D1C4E9;" class="px-[1.2rem]"><a href="index.html">Daily quote</a></li>
+        <li class="px-[1.2rem]"><a href="#">Favorites</a></li>
+        <li class="px-[1.2rem]"><a href="#">Generate quote</a></li>
+        <li class="px-[1.2rem]"><a href="#">about</a></li>
+      </ul>
+    </nav>
+  </header>
   
   
+  
+  <script src="scripts/nav.js"></script>
 </body>
 </html>
