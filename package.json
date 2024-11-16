@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/style.css  -o ./dist/style.css --watch",
+    "build": "tailwindcss -i ./src/content_style.css  -o ./dist/style.css --watch",
     "build-2": "tailwindcss -i ./src/style.css -o ./dist/nav.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

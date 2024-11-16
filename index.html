@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./dist/nav.css">
+  <link rel="stylesheet" href="./dist/style.css">
   <title>this Day></title>
   <script src="https://kit.fontawesome.com/bc5071f62b.js" crossorigin="anonymous"></script>
 </head>
@@ -43,8 +44,14 @@
     </nav>
   </header>
   
-  
+  <main id="main" class="my-[1rem] px-[1rem] w-full lg:w-[80%] lg:mx-[8%] z-[-50]">
+    <div id="container" class="w-full h-[70vh] flex flex-col gap-[1rem] justify-center items-center ">
+      <p id="quote-holder" class="text-2xl font-semibold my-[1rem]"></p>
+      <span id="quote-author" class="italic font-bold "></span>
+    </div>
+  </main>
   
   <script src="scripts/nav.js"></script>
+  <script src="scripts/fetch_data.js"></script>
 </body>
 </html>
