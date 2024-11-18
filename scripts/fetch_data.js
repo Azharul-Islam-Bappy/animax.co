@@ -30,15 +30,33 @@ function fetchData(url, callback) {
       
       callback(data);
     })
+    // .catch(() => console.error("Something went wrong!!"));
 }
 fetchData(url, displayQuote);
 
 // function for selecting random quotes and display it
 function displayQuote(data) {
-  const randomIndex = Math.floor(Math.random() * data.length);
+  
+  const today = new Date().getDate();
+  const date = localStorage.getItem("quoteDate");
+  let randomIndex;
+  
+  if (date == today) {
+    randomIndex  = JSON.parse(localStorage.getItem("savedIndex")); 
+  }
+  
+  else{
+    randomIndex = Math.floor(Math.random() * data.length);
+  }
   const dailyQuote = data[randomIndex];
+  localStorage.setItem("savedIndex",JSON.stringify(randomIndex));
+  localStorage.setItem("quoteDate",JSON.stringify(today));
+  
+  
+  
   quoteHolder.innerText = dailyQuote.quote;
   quoteAuthor.innerText = "— " + dailyQuote.character;
   addChild(container,quoteHolder);
   addChild(container,quoteAuthor);
 }
+
